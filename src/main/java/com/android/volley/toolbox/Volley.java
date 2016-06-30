@@ -26,7 +26,6 @@ import com.android.volley.RequestQueue;
 
 import java.io.File;
 
-import cz.msebera.android.httpclient.impl.client.DefaultHttpClient;
 import cz.msebera.android.httpclient.impl.client.HttpClientBuilder;
 
 public class Volley {
