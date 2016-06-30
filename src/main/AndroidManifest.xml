@@ -8,4 +8,6 @@
 
     <application />
 
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+
 </manifest>

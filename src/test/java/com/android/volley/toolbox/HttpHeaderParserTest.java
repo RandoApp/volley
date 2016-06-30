@@ -19,8 +19,8 @@ package com.android.volley.toolbox;
 import com.android.volley.Cache;
 import com.android.volley.NetworkResponse;
 
-import org.apache.http.Header;
-import org.apache.http.message.BasicHeader;
+import cz.msebera.android.httpclient.Header;
+import cz.msebera.android.httpclient.message.BasicHeader;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
