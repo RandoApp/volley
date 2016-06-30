@@ -30,8 +30,11 @@ repositories {
 }
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion = '24.0.0'
+    compileSdkVersion 22
+    buildToolsVersion = '22.0.1'
+    lintOptions {
+        abortOnError false
+    }
 }
 
 apply from: 'rules.gradle'

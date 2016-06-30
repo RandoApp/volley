@@ -21,6 +21,7 @@ import android.graphics.Bitmap.Config;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import com.android.volley.NetworkResponse;
+import com.android.volley.Request;
 import com.android.volley.Response;
 
 import org.junit.Test;
@@ -126,7 +127,7 @@ public class ImageRequestTest {
     private void verifyResize(NetworkResponse networkResponse, int maxWidth, int maxHeight,
                               ScaleType scaleType, int expectedWidth, int expectedHeight) {
         ImageRequest request = new ImageRequest("", null, maxWidth, maxHeight, scaleType,
-                Config.RGB_565, null);
+                Config.RGB_565, Request.Priority.LOW, null);
         Response<Bitmap> response = request.parseNetworkResponse(networkResponse);
         assertNotNull(response);
         assertTrue(response.isSuccess());
@@ -167,10 +168,10 @@ public class ImageRequestTest {
         assertNotNull(ImageRequest.class.getConstructor(String.class, Response.Listener.class,
                 int.class, int.class, Bitmap.Config.class, Response.ErrorListener.class));
         assertNotNull(ImageRequest.class.getConstructor(String.class, Response.Listener.class,
-                int.class, int.class, ImageView.ScaleType.class, Bitmap.Config.class,
+                int.class, int.class, ImageView.ScaleType.class, Bitmap.Config.class, Request.Priority.class,
                 Response.ErrorListener.class));
         assertEquals(ImageRequest.DEFAULT_IMAGE_TIMEOUT_MS, 1000);
         assertEquals(ImageRequest.DEFAULT_IMAGE_MAX_RETRIES, 2);
-        assertEquals(ImageRequest.DEFAULT_IMAGE_BACKOFF_MULT, 2f);
+        assertEquals(ImageRequest.DEFAULT_IMAGE_BACKOFF_MULT, 2f, 0);
     }
 }
