@@ -19,23 +19,22 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath 'com.android.tools.build:gradle-experimental:0.8.0-alpha4'
     }
 }
 
-apply plugin: 'com.android.library'
+apply plugin: "com.android.model.library"
 
 repositories {
     jcenter()
 }
-
-android {
-    compileSdkVersion 22
-    buildToolsVersion = '22.0.1'
-    lintOptions {
-        abortOnError false
+model {
+    android {
+        compileSdkVersion 24
+        buildToolsVersion = '24.0.0'
     }
 }
-
+dependencies {
+    compile group: 'cz.msebera.android', name: 'httpclient', version: '4.4.1.1'
+}
 apply from: 'rules.gradle'
-apply from: 'bintray.gradle'
