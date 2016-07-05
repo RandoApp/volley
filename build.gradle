@@ -31,7 +31,7 @@ repositories {
 model {
     android {
         compileSdkVersion 23
-        buildToolsVersion = '23.0.3'
+        buildToolsVersion = '23.0.1'
     }
 }
 dependencies {
