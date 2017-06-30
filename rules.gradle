@@ -1,6 +1,6 @@
 // See build.gradle for an explanation of what this file is.
 
-apply plugin: "com.android.model.library"
+apply plugin: "com.android.library"
 
 // Check if the android plugin version supports unit testing.
 if (configurations.findByName("testCompile")) {
