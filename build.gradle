@@ -20,12 +20,10 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.+'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5' // Add this line
     }
 }
 
 apply plugin: "com.android.library"
-apply plugin: 'com.github.dcendents.android-maven'
 
 group='com.github.RandoApp'
 
@@ -36,8 +34,5 @@ repositories {
 android {
     compileSdkVersion 25
     buildToolsVersion = '25.0.2'
-}
-dependencies {
-    compile group: 'cz.msebera.android', name: 'httpclient', version: '4.4.1.1'
 }
 apply from: 'rules.gradle'

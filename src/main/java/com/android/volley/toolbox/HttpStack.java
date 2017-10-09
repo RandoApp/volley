@@ -19,14 +19,19 @@ package com.android.volley.toolbox;
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 
+import org.apache.http.HttpResponse;
+
 import java.io.IOException;
 import java.util.Map;
 
-import cz.msebera.android.httpclient.HttpResponse;
-
 /**
  * An HTTP stack abstraction.
+ *
+ * @deprecated This interface should be avoided as it depends on the deprecated Apache HTTP library.
+ *     Use {@link BaseHttpStack} to avoid this dependency. This class may be removed in a future
+ *     release of Volley.
  */
+@Deprecated
 public interface HttpStack {
     /**
      * Performs an HTTP request with the given parameters.
@@ -39,7 +44,7 @@ public interface HttpStack {
      *                          {@link Request#getHeaders()}
      * @return the HTTP response
      */
-    public HttpResponse performRequest(Request<?> request, Map<String, String> additionalHeaders)
-            throws IOException, AuthFailureError;
+    HttpResponse performRequest(Request<?> request, Map<String, String> additionalHeaders)
+        throws IOException, AuthFailureError;
 
 }
