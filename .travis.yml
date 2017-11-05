@@ -7,8 +7,8 @@ android:
     - tools # to update the SDK tools themselves
 
     - platform-tools
-    - build-tools-25.0.2
-    - android-25
+    - build-tools-27.0.0
+    - android-27
 
 jdk:
   - oraclejdk8
