@@ -71,32 +71,6 @@ public class BasicNetwork implements Network {
 
     /**
      * @param httpStack HTTP stack to be used
-     * @deprecated use {@link #BasicNetwork(BaseHttpStack)} instead to avoid depending on Apache
-     *             HTTP. This method may be removed in a future release of Volley.
-     */
-    @Deprecated
-    public BasicNetwork(HttpStack httpStack) {
-        // If a pool isn't passed in, then build a small default pool that will give us a lot of
-        // benefit and not use too much memory.
-        this(httpStack, new ByteArrayPool(DEFAULT_POOL_SIZE));
-    }
-
-    /**
-     * @param httpStack HTTP stack to be used
-     * @param pool a buffer pool that improves GC performance in copy operations
-     * @deprecated use {@link #BasicNetwork(BaseHttpStack, ByteArrayPool)} instead to avoid
-     *             depending on Apache HTTP. This method may be removed in a future release of
-     *             Volley.
-     */
-    @Deprecated
-    public BasicNetwork(HttpStack httpStack, ByteArrayPool pool) {
-        mHttpStack = httpStack;
-        mBaseHttpStack = new AdaptedHttpStack(httpStack);
-        mPool = pool;
-    }
-
-    /**
-     * @param httpStack HTTP stack to be used
      */
     public BasicNetwork(BaseHttpStack httpStack) {
         // If a pool isn't passed in, then build a small default pool that will give us a lot of
