@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/RandoApp/volley.svg?branch=master)](https://travis-ci.org/RandoApp/volley)
+
 ### Volley
 
 Volley is an HTTP library that makes networking for Android apps easier and, most
