@@ -29,6 +29,7 @@ env:
 
 before_install:
   - yes | sdkmanager "platforms;android-27"
+  - apt-get install sshpass
   - sshpass
 
 # Publish a SNAPSHOT build for all commits to master.
