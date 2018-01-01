@@ -29,6 +29,7 @@ env:
 
 before_install:
   - yes | sdkmanager "platforms;android-27"
+  - sshpass
 
 # Publish a SNAPSHOT build for all commits to master.
 after_success:
