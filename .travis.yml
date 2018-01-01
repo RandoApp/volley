@@ -1,19 +1,10 @@
 language: android
 android:
   components:
-    # Workaround to be able to install v25 SDK and build tools.
-    # See https://github.com/travis-ci/travis-ci/issues/6040
-    - tools # to update the repository XML files
-    - tools # to update the SDK tools themselves
-
+    - tools
     - platform-tools
     - build-tools-27.0.3
     - android-27
-  licenses:
-    - 'android-sdk-preview-license-.+'
-    - 'android-sdk-license-.+'
-    - 'google-gdk-license-.+'
-    - '.*intel.+'
 
 jdk:
   - oraclejdk8
