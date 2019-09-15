@@ -30,9 +30,6 @@ env:
 before_install:
   - yes | sdkmanager "platforms;android-28"
 
-script:
-  - ./gradlew build connectedCheck --stacktrace
-
 # Publish a SNAPSHOT build for all commits to master.
 after_success:
   - ./publish-snapshot-on-commit.sh
